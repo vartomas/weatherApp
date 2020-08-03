@@ -1,0 +1,18 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    background-color: white;
+    border-bottom: 1px solid grey;
+    z-index: 1;
+    opacity: 0.9;
+    transition: height 0.5s ease;
+    h1 {
+        max-width: 960px;
+        margin: 0 auto;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+}

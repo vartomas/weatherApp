@@ -1,0 +1,85 @@
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    height: 340px;
+    overflow: hidden;
+    transition: all 1s ease;
+
+    div {
+        display: inline-block;
+        width: 27%;
+        font-weight: 400;
+        border: 2px solid gray;
+        margin: 12px;
+        padding: 12px;
+        background-color: white;
+        box-shadow: 0 0 10px rgb(101, 131, 155);
+        position: relative;
+        .deleteBtn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 24px;
+            height: 24px;
+            border: none;
+            box-shadow: none;
+            cursor: pointer;
+            margin: 0;
+            padding: 0;
+        }
+
+        .line1 {
+            position: absolute;
+            height: 2px;
+            width: 24px;
+            background-color: red;
+            left: 0;
+            top: 11px;
+        }
+
+        .line2 {
+            position: absolute;
+            height: 2px;
+            width: 24px;
+            background-color: red;
+            left: 0;
+            top: 11px;
+        }
+
+        .deleteBtn:hover {
+            .line1 {
+                transform: rotate(45deg);
+                transition: all 0.5s;
+            }
+            .line2 {
+                transform: rotate(-45deg);
+                transition: all 0.5s;
+            }
+        }
+
+        .deleteBtn:not( :hover ){
+            .line1 {
+                transform: rotate(0deg);
+                transition: all 0.5s;
+            }
+            .line2 {
+                transform: rotate(0deg);
+                transition: all 0.5s;
+            }
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+
+        img {
+            background-color: white;
+            border: 1px solid gray;
+            border-radius: 6px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
