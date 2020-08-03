@@ -18,7 +18,7 @@ const fetchData = (city) => {
         const dateNow = new Date()
         const minutes = dateNow.getMinutes().toString().length === 2 ? `${dateNow.getMinutes()}` : `0${dateNow.getMinutes()}`
         const hours = dateNow.getHours().toString().length === 2 ? `${dateNow.getHours()}` : `0${dateNow.getHours()}`
-        const date = `${dateNow.getFullYear()} ${dateNow.getMonth() + 1} ${dateNow.getDate()} ${hours}:${minutes}`
+        const date = `${dateNow.getFullYear()}/${dateNow.getMonth() + 1}/${dateNow.getDate()} ${hours}:${minutes}`
         const id = new Date().getTime()
         const info = {
             id: id,
