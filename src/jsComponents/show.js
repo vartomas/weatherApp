@@ -4,7 +4,6 @@ const showMore = () => {
     const heightString = document.querySelector('main').offsetHeight
     document.querySelector('main').style.height = `${heightString + 340}px`
     slideCount += 1
-    document.querySelector('.showMore').style.display = 'none'
     check()
 }
 
