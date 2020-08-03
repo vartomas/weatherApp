@@ -4,12 +4,6 @@ import { renderCities } from './renderCities.js'
 
 const fetchData = (city) => {
     const cities = getFromLocal()
-    const exists = cities.find(e => e.city.toLowerCase() === city.toLowerCase())
-    if (exists) {
-        document.querySelector('.submit').style.display = 'inline-block'
-        document.querySelector('img').style.display = 'none'
-        return alert('City already exists')
-    }
     const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=10ff4edd20ac8f699392498448a726ae`
     fetch(url)
     .then(response => response.json())
@@ -37,7 +31,12 @@ const fetchData = (city) => {
             city: name,
             date: date
         }
-        cities.push(info)
+        const exists = cities.find(e => e.city === name)
+        if (exists) {
+            const index = cities.findIndex(e => e.city === name)
+            cities.splice(index, 1)
+        }
+        cities.unshift(info)
         updateLocal(cities)
         renderCities()
         })
