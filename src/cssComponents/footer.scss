@@ -29,3 +29,9 @@ footer {
         color: rgb(165, 165, 165);
     }
 }
+
+@media (max-width: 825px) {
+    footer {
+        display: none;
+    }
+}
