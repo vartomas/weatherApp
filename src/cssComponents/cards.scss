@@ -83,3 +83,53 @@ main {
         }
     }
 }
+
+@media (max-width: 825px) {
+    main {
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 12px auto;
+        justify-content: center;
+        div {
+            width: 40%;
+            box-shadow: none;
+            .line1 {
+                transform: rotate(45deg);
+            }
+            .line2 {
+                transform: rotate(-45deg);
+            }
+            .deleteBtn:hover {
+                .line1 {
+                    transform: none;
+                    transition: none;
+                }
+                .line2 {
+                    transform: none;
+                    transition: none;
+                }
+            }
+            .deleteBtn:not( :hover ){
+                .line1 {
+                    transform: none;
+                    transition: none;
+                }
+                .line2 {
+                    transform: none;
+                    transition: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    main {
+        div {
+            width: 90%;
+            margin: 12px auto;
+            box-shadow: none;
+        }
+    }
+}
