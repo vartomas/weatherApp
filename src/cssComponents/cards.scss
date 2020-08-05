@@ -94,32 +94,6 @@ main {
         div {
             width: 40%;
             box-shadow: none;
-            .line1 {
-                transform: rotate(45deg);
-            }
-            .line2 {
-                transform: rotate(-45deg);
-            }
-            .deleteBtn:hover {
-                .line1 {
-                    transform: none;
-                    transition: none;
-                }
-                .line2 {
-                    transform: none;
-                    transition: none;
-                }
-            }
-            .deleteBtn:not( :hover ){
-                .line1 {
-                    transform: none;
-                    transition: none;
-                }
-                .line2 {
-                    transform: none;
-                    transition: none;
-                }
-            }
         }
     }
 }
